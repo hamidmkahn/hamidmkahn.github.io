@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Let AI Change Production Without an Incident | Hamid Khan</title>
+<meta name="description" content="Hamid Khan on putting AI into production in a regulated company: build the controls first, let automation earn autonomy, and measure what it returns.">
+<link rel="canonical" href="https://hamidmkahn.github.io/ai-governance.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hamidmkahn.github.io/ai-governance.html">
+<meta property="og:title" content="How we let AI change production without an incident">
+<meta property="og:description" content="Build the controls first, let automation earn autonomy, and measure what it returns. Hamid Khan on governed AI at FICO.">
+<meta property="og:image" content="https://hamidmkahn.github.io/photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f6f6f3; --surface: #ffffff; --fg: #14161b; --muted: #5a5f69; --line: #e2e1db;
+  --accent: #1d4a9a; --accent-soft: #e8eef9;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0f1114; --surface: #171a1f; --fg: #ecebe6; --muted: #a2a6ae; --line: #2a2e35; --accent: #93b3ee; --accent-soft: #1c2638; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0f1114; --surface: #171a1f; --fg: #ecebe6; --muted: #a2a6ae; --line: #2a2e35; --accent: #93b3ee; --accent-soft: #1c2638; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1.06rem/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 720px; margin-inline: auto; padding-inline: 16px; }
+header { border-bottom: 1px solid var(--line); }
+header .wrap { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; color: var(--fg); }
+.mono { width: 32px; height: 32px; border-radius: 50%; background: var(--fg); color: var(--bg); display: grid; place-items: center; font: 500 .8rem var(--serif); }
+header nav a { color: var(--muted); text-decoration: none; font-size: .9rem; }
+article { padding-block: clamp(48px, 8vw, 88px); }
+.eyebrow { font-size: .8rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
+h1 { font: 400 clamp(2.2rem, 5vw, 3.2rem)/1.08 var(--serif); letter-spacing: -0.01em; margin: 12px 0 18px; text-wrap: balance; }
+.byline { color: var(--muted); font-size: .92rem; margin-bottom: 40px; }
+h2 { font: 400 1.6rem/1.2 var(--serif); margin: 40px 0 12px; }
+p { margin: 0 0 18px; }
+ul { margin: 0 0 18px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+.callout { background: var(--accent-soft); border-radius: 12px; padding: 20px 24px; margin: 28px 0; }
+.callout p { margin: 0; }
+.end { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 24px; color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><span class="mono">HK</span>Hamid Khan</a>
+    <nav><a href="./">Back to home</a></nav>
+  </div>
+</header>
+
+<main>
+<article class="wrap">
+  <span class="eyebrow">Point of view</span>
+  <h1>How we let AI change production without an incident</h1>
+  <p class="byline">Hamid Khan · Senior Digital Transformation Leader, FICO</p>
+
+  <p>Every executive I talk to wants AI working in their operations. Most of them have the same worry: what happens the first time it gets something wrong in production, in front of clients and auditors?</p>
+
+  <p>At FICO our SaaS platforms support financial services clients around the world, and we work under SOX, PCI-DSS and NIST. Nothing reaches production without someone being able to explain why it was safe. So when we decided to let AI patch our servers on its own, we started with the controls.</p>
+
+  <h2>Start with a job people already dislike</h2>
+  <p>Patching mainframe, UNIX, Linux and Windows servers took days. It was repetitive, it mattered for compliance, and the steps were well understood. That made it a good first candidate. When the work is already defined, you can tell whether the automation is doing it right.</p>
+  <p>The system we built checks each server before patching, decides the order from live telemetry, confirms the server is healthy afterward and rolls back on its own if something is off.</p>
+
+  <h2>Give the automation a referee</h2>
+  <p>Before anything ran unattended, every automated change had to clear three checks:</p>
+  <ul>
+    <li><b>LLM-as-a-judge review.</b> A second model reviews each proposed change before it runs.</li>
+    <li><b>Architectural fitness functions.</b> Automated tests confirm the change keeps the system within the rules we've set for it.</li>
+    <li><b>Approval gates.</b> Points where the change stops until it passes, with a record of why it was allowed through.</li>
+  </ul>
+  <p>None of this slows the work down much, and it gives us an answer when an auditor asks how we know the automation is safe.</p>
+
+  <div class="callout"><p><b>The results so far:</b> patch cycles went from days to hours, compliance is at 100%, engineers got back about 80 hours a month, and the automation hasn't caused a single incident. Over the same period change success across the organization went from 70% to 99%.</p></div>
+
+  <h2>What I'd tell another leader</h2>
+  <ul>
+    <li><b>Make autonomy something the automation earns.</b> It runs on its own because it has passed checks you can show someone, not because you trust it.</li>
+    <li><b>Pick a first use case you can measure.</b> Cycle time, compliance and incidents told us quickly whether it was working.</li>
+    <li><b>Bring risk and compliance in early.</b> Treat their questions as design requirements. It's much easier than defending a finished system.</li>
+    <li><b>Report the value in business terms.</b> Hours returned, incidents avoided and audit findings closed are what leaders fund next time.</li>
+  </ul>
+
+  <p>The same approach applies well beyond patching: service desk triage, client support, order operations, anywhere AI acts on its own. The controls come first, and the speed follows from them.</p>
+
+  <p class="end">I'm open to Executive Director and Senior Director roles in digital transformation, AI strategy and technology operations. Reach me at <a href="mailto:hamid.khan4153@gmail.com">hamid.khan4153@gmail.com</a> or on <a href="https://www.linkedin.com/in/hamid-m-khan-b2042654/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+</article>
+</main>
+</body>
+</html>

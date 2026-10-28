@@ -3,8 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hamid Khan</title>
-<meta name="description" content="Hamid Khan: technology operations and infrastructure executive. SRE, mainframe, hybrid cloud and governed AI operations.">
+<title>Hamid Khan | Technology Transformation &amp; AI Leader</title>
+<meta name="description" content="Hamid Khan leads technology transformation and governed AI at FICO: a 65+ person global organization, 99% change success, service desk and client support, M&amp;A integration. Based in Minneapolis.">
+<link rel="canonical" href="https://hamidmkahn.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://hamidmkahn.github.io/">
+<meta property="og:title" content="Hamid Khan | Technology Transformation &amp; AI Leader">
+<meta property="og:description" content="I lead technology transformation with AI that executives can trust and auditors can sign off on. 65+ person global organization at FICO.">
+<meta property="og:image" content="https://hamidmkahn.github.io/photo.jpg">
+<meta property="og:image:alt" content="Portrait of Hamid Khan">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hamid Khan",
+  "url": "https://hamidmkahn.github.io/",
+  "image": "https://hamidmkahn.github.io/photo.jpg",
+  "jobTitle": "Senior Digital Transformation Leader",
+  "worksFor": { "@type": "Organization", "name": "FICO" },
+  "email": "mailto:hamid.khan4153@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Minneapolis", "addressRegion": "MN", "addressCountry": "US" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Wichita State University" },
+  "award": ["IBM Champion 2025", "IBM Champion 2026"],
+  "knowsAbout": ["Digital transformation", "AI strategy", "AI governance", "Intelligent automation", "Service desk and customer support", "M&A technology integration", "Site reliability engineering"],
+  "sameAs": ["https://www.linkedin.com/in/hamid-m-khan-b2042654/"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
@@ -87,13 +112,14 @@ nav.links a:hover { color: var(--fg); }
   .portrait { max-width: 360px; }
 }
 
-/* dark band */
-.band { background: var(--band); color: var(--band-fg); }
-.band .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 48px); }
-.band h3 { color: var(--band-accent); margin-bottom: 10px; }
-.band p { color: var(--band-muted); }
-.band strong { color: var(--band-fg); font-weight: 500; }
-@media (max-width: 760px) { .band .wrap { grid-template-columns: 1fr; } }
+/* dark band: scope at a glance */
+.band { background: var(--band); color: var(--band-fg); padding-block: clamp(40px, 6vw, 64px); }
+.band .wrap { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(20px, 3vw, 36px); }
+.stat { display: grid; gap: 6px; align-content: start; }
+.stat b { font: 400 clamp(2rem, 3.6vw, 2.6rem)/1 var(--serif); color: var(--band-accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stat span { color: var(--band-muted); font-size: .9rem; line-height: 1.45; }
+@media (max-width: 900px) { .band .wrap { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .band .wrap { grid-template-columns: repeat(2, 1fr); } }
 
 /* result cards */
 .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -126,6 +152,13 @@ nav.links a:hover { color: var(--fg); }
 .cred b { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; }
 .cred span { color: var(--muted); font-size: .92rem; }
 
+/* point of view */
+.pov .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.pov blockquote { margin: 0; font: 400 clamp(1.5rem, 3vw, 2rem)/1.25 var(--serif); border-left: 3px solid var(--accent); padding-left: 24px; }
+.pov .text { display: grid; gap: 16px; }
+.pov .text p { color: var(--muted); }
+@media (max-width: 760px) { .pov .wrap { grid-template-columns: 1fr; } }
+
 .stack { margin-top: 48px; display: grid; gap: 14px; }
 .stack-row { display: grid; grid-template-columns: 170px 1fr; gap: 24px; align-items: baseline; }
 .stack-row h4 { margin: 0; font-size: .85rem; font-weight: 600; color: var(--muted); }
@@ -137,7 +170,8 @@ nav.links a:hover { color: var(--fg); }
 .contact { background: var(--band); color: var(--band-fg); }
 .contact .eyebrow { color: var(--band-accent); }
 .contact h2 { margin-block: 10px 14px; }
-.contact p { color: var(--band-muted); max-width: 44ch; }
+.contact p { color: var(--band-muted); max-width: 52ch; }
+.contact p.open { color: var(--band-fg); font-size: 1.1rem; margin-bottom: 10px; }
 .contact .actions { margin-top: 28px; }
 .contact .btn { border-color: var(--band-fg); color: var(--band-fg); }
 .contact .btn.solid { background: var(--band-fg); color: var(--band); }
@@ -150,8 +184,9 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
   <div class="wrap">
     <a class="brand" href="#top"><span class="mono">HK</span>Hamid Khan</a>
     <nav class="links" aria-label="Sections">
-      <a href="#bring">What I bring</a>
+      <a href="#bring">Results</a>
       <a href="#approach">Approach</a>
+      <a href="ai-governance.html">Point of view</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -163,10 +198,10 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
     <div class="wrap">
       <div class="hero-text">
         <span class="pill"><span class="dot"></span>Senior Digital Transformation Leader · FICO</span>
-        <h1>I run mission-critical platforms, from distributed systems and the mainframe <em>to AI that patches itself.</em></h1>
-        <p class="lede">I lead end-to-end technology operations at FICO, whose decision platforms support global financial operations. My team spans 3 continents. We use AI automation with guardrails strong enough for SOX, PCI-DSS and NIST.</p>
+        <h1>I lead technology transformation with AI that executives can trust <em>and auditors can sign off on.</em></h1>
+        <p class="lede">At FICO I lead a global organization of 65+ people that runs and modernizes the SaaS platforms behind financial decisions worldwide, including the service desk and client support. Before that I ran the e-commerce, order and store systems for a 500+ store retailer. I've led teams for 14 years, and lately my work has been putting AI into production where every change gets audited.</p>
         <div class="actions">
-          <a class="btn solid" href="#bring">What I bring</a>
+          <a class="btn solid" href="#bring">See the results</a>
           <a class="btn" href="Hamid-Khan-Resume.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
       </div>
@@ -176,65 +211,58 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
     </div>
   </section>
 
-  <section class="band" aria-label="Background">
+  <section class="band" aria-label="Scope at a glance">
     <div class="wrap">
-      <div>
-        <h3>The platforms</h3>
-        <p>UNIX, Linux, Windows, VMware, AWS, Azure and IBM Z, run as one estate. <strong>Two-time IBM Champion</strong> (2025 &amp; 2026).</p>
-      </div>
-      <div>
-        <h3>The enterprise</h3>
-        <p><strong>20+ years</strong> running regulated, always-on platforms for global financial services and national retail, including FICO, Charlotte Russe and Kohl's.</p>
-      </div>
-      <div>
-        <h3>AI operations</h3>
-        <p>Built <strong>autonomous patching, AI agents and MCP gateways</strong>, with LLM-as-a-judge checks that every automated change must pass.</p>
-      </div>
+      <div class="stat"><b>65+</b><span>people in a global organization across 4 countries</span></div>
+      <div class="stat"><b>14 yrs</b><span>leading teams of direct reports</span></div>
+      <div class="stat"><b>99%</b><span>change success, up from 70%</span></div>
+      <div class="stat"><b>~80%</b><span>fewer production incidents</span></div>
+      <div class="stat"><b>$1.5M</b><span>saved every year, plus ~$5M in cost avoided</span></div>
     </div>
   </section>
 
   <section id="bring">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Proven at FICO, Charlotte Russe and Kohl's</span>
-        <h2>What I bring</h2>
+        <span class="eyebrow">Results at FICO and Charlotte Russe</span>
+        <h2>What I deliver</h2>
       </div>
       <div class="cards">
         <article class="card">
-          <span class="tag">FICO</span>
-          <h3>Patching that runs itself, safely.</h3>
-          <p>I designed and deployed AI-driven patching across our server estates. It runs pre-checks, orders patches using live telemetry, validates health afterward and rolls back on its own. A patch cycle that took a week now takes hours.</p>
-          <span class="result"><span class="dot"></span>80 engineer hours freed each month</span>
-        </article>
-        <article class="card">
-          <span class="tag">FICO</span>
-          <h3>Automation with a referee.</h3>
-          <p>Every automated change passes LLM-as-a-judge validation, architectural fitness functions and approval gates before it runs. That's what makes autonomy acceptable in a regulated environment.</p>
+          <span class="tag">AI transformation</span>
+          <h3>AI that changes production, with a referee.</h3>
+          <p>I designed AI-driven patching that runs pre-checks, orders patches from live telemetry, confirms health afterward and rolls back on its own. Before it ran unattended, every automated change had to pass LLM-as-a-judge validation, architectural fitness functions and approval gates. Patch cycles went from days to hours at 100% compliance.</p>
           <span class="result"><span class="dot"></span>Zero automation-caused incidents</span>
         </article>
         <article class="card">
-          <span class="tag">FICO</span>
-          <h3>Fewer incidents, found sooner.</h3>
-          <p>Automation and SRE practice cut production incidents by about 80%. I rebuilt observability across Splunk, Datadog and AppDynamics so problems surface before customers notice them.</p>
-          <span class="result"><span class="dot"></span>~80% fewer incidents · 90% faster detection</span>
+          <span class="tag">Client experience</span>
+          <h3>Support that clients can feel.</h3>
+          <p>I run the service desk and client-facing support channels for FICO's SaaS platforms, managed to SLAs and measured by ticket volume and CSAT. I work hand in hand with Customer Success on escalations, and we moved from fixing the same problems twice to fixing them at the source.</p>
+          <span class="result"><span class="dot"></span>Repeat incidents down from 66% to 10%</span>
         </article>
         <article class="card">
-          <span class="tag">FICO</span>
-          <h3>Infrastructure spend that pays back.</h3>
-          <p>I own budget, vendors and contracts for the platform. Optimization and vendor consolidation save $1.5M every year, and the IBM ZOPD program added about $5M more.</p>
-          <span class="result"><span class="dot"></span>$1.5M a year + ~$5M program savings</span>
+          <span class="tag">Operational excellence</span>
+          <h3>Change that lands the first time.</h3>
+          <p>Tighter change governance and deployment readiness took change success from 70% to 99%. SRE practice and automation cut production incidents by about 80%, and rebuilt observability means problems surface before clients notice them.</p>
+          <span class="result"><span class="dot"></span>99% change success · 90% faster detection</span>
         </article>
         <article class="card">
-          <span class="tag">Charlotte Russe</span>
-          <h3>A data center moved without closing a store.</h3>
-          <p>I directed the physical data center relocation and the move to Microsoft Azure, and owned disaster recovery for a national retailer, all under PCI and SOX.</p>
+          <span class="tag">Financial stewardship</span>
+          <h3>Technology spend that pays back.</h3>
+          <p>I own budget, vendors and contracts, and I work with product, architecture and C-suite leaders to turn operational risk into roadmaps they're willing to fund. Vendor consolidation and optimization save $1.5M a year, and IBM's ZOPD program avoided about $5M more.</p>
+          <span class="result"><span class="dot"></span>$1.5M a year + ~$5M avoided</span>
+        </article>
+        <article class="card">
+          <span class="tag">M&amp;A and data</span>
+          <h3>Bringing companies together.</h3>
+          <p>I've worked on technology integration for mergers and acquisitions at both FICO and Charlotte Russe, including customer, billing and order systems. At FICO I've also worked on the analytics and data platform behind FICO Scores.</p>
+          <span class="result"><span class="dot"></span>Integrations at two companies</span>
+        </article>
+        <article class="card">
+          <span class="tag">Retail and order-to-cash</span>
+          <h3>Orders kept flowing for 500+ stores.</h3>
+          <p>At Charlotte Russe my team ran the e-commerce, order management, point-of-sale and fulfillment systems. I directed the data center relocation and the move to Microsoft Azure without closing a store, and owned disaster recovery, all under PCI and SOX.</p>
           <span class="result"><span class="dot"></span>500+ stores kept running</span>
-        </article>
-        <article class="card">
-          <span class="tag">Kohl's</span>
-          <h3>Critical systems migrated with no downtime.</h3>
-          <p>I led the migration of 70+ critical application and database servers from AIX 5.x to IBM p7-770, delivered on schedule for a 24/7 retail operation.</p>
-          <span class="result"><span class="dot"></span>Zero production impact</span>
         </article>
       </div>
     </div>
@@ -256,9 +284,25 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
           <p>I judge operations by fewer incidents, faster detection and lower MTTR, and I report those numbers to executives in plain terms.</p>
         </div>
         <div class="row">
+          <h3>Technology decisions are business decisions.</h3>
+          <p>I bring leaders a roadmap with a cost, a risk and a result attached, so they can decide what to fund and see later whether it paid off.</p>
+        </div>
+        <div class="row">
           <h3>A recovery plan only counts once it's tested.</h3>
           <p>Every RTO and RPO is backed by a failover that has actually run. Our DR tests pass at 100%.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pov" aria-label="Point of view">
+    <div class="wrap">
+      <blockquote>"Automation earns the right to act on its own by passing checks we can audit."</blockquote>
+      <div class="text">
+        <span class="eyebrow">Point of view</span>
+        <h2>How we let AI change production without an incident</h2>
+        <p>Most companies want AI in their operations and worry about what happens when it gets something wrong. Here's how we built the controls first at FICO, and what I'd tell another leader starting out.</p>
+        <div class="actions"><a class="btn solid" href="ai-governance.html">Read the piece</a></div>
       </div>
     </div>
   </section>
@@ -275,7 +319,7 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
           <div class="what">
             <span class="org">FICO</span>
             <span class="role">Senior Digital Transformation Leader, End-to-End Technology Operations</span>
-            <p>Lead availability, resilience, security and modernization of customer-facing decision intelligence platforms. Organization of 10 direct reports and 57+ contractors across server systems, mainframe, converged infrastructure, storage, SRE, service desk and production support.</p>
+            <p>Lead the transformation, availability and security of FICO's SaaS decision intelligence platforms, used by internal and external clients in global financial services. Organization of 10 direct reports and 57+ contractors in 4 countries, covering the service desk and client support, SRE, infrastructure, mainframe, storage and service management. Put AI agents and autonomous remediation into production, own budget and vendors, and worked on M&amp;A integration and the analytics and data platform behind FICO Scores.</p>
           </div>
         </div>
         <div class="job">
@@ -283,7 +327,7 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
           <div class="what">
             <span class="org">Charlotte Russe</span>
             <span class="role">Senior Technology Leader</span>
-            <p>Led enterprise infrastructure, data center transformation, Azure migration and business continuity for a national retailer with 500+ stores.</p>
+            <p>Led enterprise technology and a team of direct reports for a national retailer with 500+ stores. Ran e-commerce, order management, point-of-sale and fulfillment systems, worked on M&amp;A integration, moved the data center to Microsoft Azure and owned business continuity.</p>
           </div>
         </div>
         <div class="job">
@@ -291,7 +335,13 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
           <div class="what">
             <span class="org">Kohl's Department Stores</span>
             <span class="role">Senior Platform Managing Engineer</span>
-            <p>Ran AIX, Windows and RHEL platforms for SAS, Oracle, DB2, WebLogic, MQ and WebSphere, with 24/7 high-availability support for stores nationwide.</p>
+            <p>Led the migration of 70+ critical application and database servers with no production impact, for 24/7 retail systems serving stores nationwide.</p>
+          </div>
+        </div>
+        <div class="job">
+          <span class="when">Earlier</span>
+          <div class="what">
+            <p>Talent Portal (Contractor) · Montgomery Advertiser · Wichita Eagle (Contractor)</p>
           </div>
         </div>
       </div>
@@ -303,9 +353,8 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
       </div>
 
       <div class="stack">
-        <div class="stack-row"><h4>AI &amp; automation</h4><div class="chips"><span class="chip">AI agents</span><span class="chip">MCP gateways &amp; servers</span><span class="chip">LLM-as-a-judge</span><span class="chip">AIOps</span><span class="chip">Terraform</span><span class="chip">Ansible</span><span class="chip">Puppet</span><span class="chip">Jenkins</span></div></div>
-        <div class="stack-row"><h4>Platforms &amp; cloud</h4><div class="chips"><span class="chip">IBM Z mainframe</span><span class="chip">AIX</span><span class="chip">RHEL</span><span class="chip">Windows Server</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">VMware</span><span class="chip">Nutanix</span><span class="chip">Kubernetes</span><span class="chip">OpenShift</span></div></div>
-        <div class="stack-row"><h4>Operations</h4><div class="chips"><span class="chip">ServiceNow</span><span class="chip">Splunk</span><span class="chip">Datadog</span><span class="chip">AppDynamics</span><span class="chip">SOX</span><span class="chip">PCI-DSS</span><span class="chip">NIST</span></div></div>
+        <div class="stack-row"><h4>What I lead</h4><div class="chips"><span class="chip">AI strategy &amp; governance</span><span class="chip">Digital transformation roadmaps</span><span class="chip">Service desk &amp; client support</span><span class="chip">Operational excellence &amp; SRE</span><span class="chip">M&amp;A technology integration</span><span class="chip">Budget, vendors &amp; contracts</span><span class="chip">Regulated environments (SOX, PCI-DSS, NIST)</span><span class="chip">Global teams &amp; contractors</span></div></div>
+        <div class="stack-row"><h4>Platforms I've led</h4><p style="color:var(--muted)">AWS, Azure, VMware and IBM Z mainframe, run as one estate, with ServiceNow, Splunk and Datadog at the center of operations.</p></div>
       </div>
     </div>
   </section>
@@ -314,7 +363,8 @@ footer .wrap { border-top: 1px solid color-mix(in srgb, var(--band-muted) 30%, t
     <div class="wrap">
       <span class="eyebrow">Contact</span>
       <h2>Let's talk.</h2>
-      <p>For conversations about technology operations leadership, AI-driven operations and infrastructure modernization.</p>
+      <p class="open">Open to Executive Director and Senior Director roles in digital transformation, AI strategy and technology operations.</p>
+      <p>Based in Minneapolis. Open to remote, hybrid and travel.</p>
       <div class="actions">
         <button class="btn solid" id="copy-email" type="button">hamid.khan4153@gmail.com</button>
         <a class="btn" href="https://www.linkedin.com/in/hamid-m-khan-b2042654/" target="_blank" rel="noopener">LinkedIn</a>
