@@ -6,6 +6,7 @@
 <title>How We Let AI Change Production Without an Incident | Hamid Khan</title>
 <meta name="description" content="Hamid Khan on putting AI into production in a regulated company: build the controls first, let automation earn autonomy, and measure what it returns.">
 <link rel="canonical" href="https://hamidmkahn.github.io/ai-governance.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2314161b'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23f6f6f3'%3EHK%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hamidmkahn.github.io/ai-governance.html">
 <meta property="og:title" content="How we let AI change production without an incident">
@@ -61,11 +62,11 @@ li { margin-bottom: 8px; }
 <article class="wrap">
   <span class="eyebrow">Point of view</span>
   <h1>How we let AI change production without an incident</h1>
-  <p class="byline">Hamid Khan · Senior Digital Transformation Leader, FICO</p>
+  <p class="byline">Hamid Khan · Senior Digital Transformation Leader, FICO (2019–2026)</p>
 
   <p>Every executive I talk to wants AI working in their operations. Most of them have the same worry: what happens the first time it gets something wrong in production, in front of clients and auditors?</p>
 
-  <p>At FICO our SaaS platforms support financial services clients around the world, and we work under SOX, PCI-DSS and NIST. Nothing reaches production without someone being able to explain why it was safe. So when we decided to let AI patch our servers on its own, we started with the controls.</p>
+  <p>At FICO our SaaS platforms supported financial services clients around the world, and we worked under SOX, PCI-DSS and NIST. Nothing reached production without someone being able to explain why it was safe. So when we decided to let AI patch our servers on its own, we started with the controls.</p>
 
   <h2>Start with a job people already dislike</h2>
   <p>Patching mainframe, UNIX, Linux and Windows servers took days. It was repetitive, it mattered for compliance, and the steps were well understood. That made it a good first candidate. When the work is already defined, you can tell whether the automation is doing it right.</p>
@@ -78,9 +79,9 @@ li { margin-bottom: 8px; }
     <li><b>Architectural fitness functions.</b> Automated tests confirm the change keeps the system within the rules we've set for it.</li>
     <li><b>Approval gates.</b> Points where the change stops until it passes, with a record of why it was allowed through.</li>
   </ul>
-  <p>None of this slows the work down much, and it gives us an answer when an auditor asks how we know the automation is safe.</p>
+  <p>None of this slowed the work down much, and it gave us an answer whenever an auditor asked how we knew the automation was safe.</p>
 
-  <div class="callout"><p><b>The results so far:</b> patch cycles went from days to hours, compliance is at 100%, engineers got back about 80 hours a month, and the automation hasn't caused a single incident. Over the same period change success across the organization went from 70% to 99%.</p></div>
+  <div class="callout"><p><b>The results:</b> patch cycles went from days to hours, compliance reached 100%, engineers got back about 80 hours a month, and the automation didn't cause a single incident. Over the same period change success across the organization went from 70% to 99%.</p></div>
 
   <h2>What I'd tell another leader</h2>
   <ul>
